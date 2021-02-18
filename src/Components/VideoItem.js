@@ -1,15 +1,10 @@
 import React from "react";
-import VideoDetail from "./VideoDetail";
+// import VideoDetail from "./VideoDetail";
 
 const VideoItem = ({ video }) => {
-  console.log("hello world");
-  console.log(`video item ${video}`);
-  // console.log("video item" + videos);
-  // const renderedList = videos.map((video) => {
-  //   return video;
-  // });
-  // console.log(renderedList);
-  return <div key={"id"}>video Item :{video}</div>;
+  const videoDescription = video.snippet.title;
+
+  return <div>{videoDescription}</div>;
 };
 
 export default VideoItem;

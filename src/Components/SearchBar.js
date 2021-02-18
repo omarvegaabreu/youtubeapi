@@ -12,13 +12,19 @@ class SearchBar extends React.Component {
   onFormSubmit = (e) => {
     e.preventDefault();
     this.props.onSubmit(this.state.term);
+    this.searchTermLabel();
   };
+
+  searchTermLabel = (e) => {
+    console.log(e);
+  };
+
   render() {
     return (
       <div className="search-bar  ui segment">
         <Label as="a">
-          YouTube API Video Search
-          <Label.Detail>{this.state.term}</Label.Detail>
+          Video Search
+          <Label.Detail>{this.state.term ? "Have fun!" : null}</Label.Detail>
         </Label>
         <Form onSubmit={this.onFormSubmit}>
           <Form.Input
