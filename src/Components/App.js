@@ -4,6 +4,7 @@ import SearchBar from "./SearchBar";
 import { youTubeApiKey } from "../Util/apiKey";
 import VideoList from "./VideoList";
 import VideoDetail from "./VideoDetail";
+import { Container } from "semantic-ui-react";
 import "./App.css";
 
 class App extends React.Component {
@@ -35,14 +36,14 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="ui container">
+      <Container>
         <SearchBar onSubmit={this.onSearchSubmit} />
         <VideoDetail selectedVideo={this.state.selectedVideo} />
         <VideoList
           videos={this.state.videos}
           onVideoSelect={this.onVideoSelect}
         />
-      </div>
+      </Container>
     );
   }
 }

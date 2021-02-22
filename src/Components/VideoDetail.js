@@ -1,6 +1,6 @@
 import React from "react";
 import "./VideoDetail.css";
-import { Button, Modal, Sticky, Embed } from "semantic-ui-react";
+import { Button, Modal, Sticky, Embed, Icon } from "semantic-ui-react";
 
 const VideoDetail = ({ selectedVideo }) => {
   const [open, setOpen] = React.useState(false);
@@ -16,7 +16,9 @@ const VideoDetail = ({ selectedVideo }) => {
         onOpen={() => setOpen(true)}
         trigger={
           <Sticky className="sticky">
-            <Button>Click to view: {videoTitle}</Button>
+            <Button color="red" icon labelPosition="center">
+              <Icon name="play" /> Click to view: {videoTitle}
+            </Button>
           </Sticky>
         }
       >
