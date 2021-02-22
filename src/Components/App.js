@@ -4,6 +4,7 @@ import SearchBar from "./SearchBar";
 import { youTubeApiKey } from "../Util/apiKey";
 import VideoList from "./VideoList";
 import VideoDetail from "./VideoDetail";
+import "./App.css";
 
 class App extends React.Component {
   state = {
@@ -19,7 +20,7 @@ class App extends React.Component {
           q: term,
           part: "snippet",
           type: "",
-          maxResults: 10,
+          maxResults: 16,
           key: youTubeApiKey(),
         },
       }
@@ -30,7 +31,6 @@ class App extends React.Component {
 
   onVideoSelect = (video) => {
     this.setState({ selectedVideo: video });
-    console.log(this.state.selectedVideo);
   };
 
   render() {

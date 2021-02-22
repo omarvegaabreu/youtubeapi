@@ -1,16 +1,29 @@
 import React from "react";
 import VideoItem from "./VideoItem";
-import { List } from "semantic-ui-react";
+import { Grid } from "semantic-ui-react";
+import "./VideoList.css";
 
 const VideoList = ({ videos, onVideoSelect }) => {
   const renderedVideosList = videos.map((video) => {
     const videoId = video.id.videoId;
+    console.log(videoId);
 
     return (
-      <VideoItem key={videoId} video={video} onVideoSelect={onVideoSelect} />
+      <Grid.Column>
+        <VideoItem
+          className="image-list"
+          key={videoId}
+          video={video}
+          onVideoSelect={onVideoSelect}
+        />
+      </Grid.Column>
     );
   });
-  return <List divided>{renderedVideosList}</List>;
+  return (
+    <Grid relaxed columns={2}>
+      {renderedVideosList}
+    </Grid>
+  );
 };
 
 export default VideoList;
