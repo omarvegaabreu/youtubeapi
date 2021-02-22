@@ -1,0 +1,5 @@
+.sticky {
+  position: -webkit-sticky; /* Required for Safari */
+  position: sticky;
+  height: 50px;
+}

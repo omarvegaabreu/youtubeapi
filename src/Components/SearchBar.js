@@ -12,11 +12,6 @@ class SearchBar extends React.Component {
   onFormSubmit = (e) => {
     e.preventDefault();
     this.props.onSubmit(this.state.term);
-    this.searchTermLabel();
-  };
-
-  searchTermLabel = (e) => {
-    console.log(e);
   };
 
   render() {
@@ -33,7 +28,7 @@ class SearchBar extends React.Component {
             onChange={this.onInputChange}
           />
 
-          <Button onClick={this.onSubmit}>my butt</Button>
+          <Button onClick={this.onSubmit}>Search</Button>
         </Form>
       </div>
     );

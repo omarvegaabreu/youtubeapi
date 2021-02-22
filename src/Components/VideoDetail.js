@@ -1,7 +1,39 @@
 import React from "react";
+import "./VideoDetail.css";
+import { Button, Modal, Sticky, Embed } from "semantic-ui-react";
 
-const VideoDetail = (props) => {
-  return <div>video detail</div>;
+const VideoDetail = ({ selectedVideo }) => {
+  const [open, setOpen] = React.useState(false);
+  if (selectedVideo) {
+    const videoDescription = selectedVideo.snippet.description;
+    const videoTitle = selectedVideo.snippet.title;
+    const videoThumbnail = selectedVideo.snippet.thumbnails.high.url;
+    const videoId = selectedVideo.id.videoId;
+    return (
+      <Modal
+        open={open}
+        onClose={() => setOpen(false)}
+        onOpen={() => setOpen(true)}
+        trigger={
+          <Sticky className="sticky">
+            <Button>Click to view: {videoTitle}</Button>
+          </Sticky>
+        }
+      >
+        <Modal.Header>
+          <p>{videoTitle}</p>
+        </Modal.Header>
+        <Modal.Content>
+          <Embed id={videoId} placeholder={videoThumbnail} source="youtube" />
+
+          <Modal.Description>
+            <p> {videoDescription}</p>
+          </Modal.Description>
+        </Modal.Content>
+      </Modal>
+    );
+  }
+  return null;
 };
 
 export default VideoDetail;

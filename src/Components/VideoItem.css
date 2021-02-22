@@ -1,0 +1,14 @@
+.video-list-item {
+  display: flex !important;
+  align-items: center !important;
+  cursor: pointer;
+}
+
+.video-item-heather {
+  text-align: left;
+}
+
+.video-list-image {
+  max-width: 180px;
+  border-style: inset;
+}

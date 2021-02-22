@@ -2,14 +2,13 @@ import React from "react";
 import axios from "axios";
 import SearchBar from "./SearchBar";
 import { youTubeApiKey } from "../Util/apiKey";
-import DisplayVideo from "./DisplayVideo";
 import VideoList from "./VideoList";
 import VideoDetail from "./VideoDetail";
-import VideoItem from "./VideoItem";
 
 class App extends React.Component {
   state = {
     videos: [],
+    selectedVideo: null,
   };
 
   onSearchSubmit = async (term) => {
@@ -20,27 +19,29 @@ class App extends React.Component {
           q: term,
           part: "snippet",
           type: "",
-          maxResults: 5,
+          maxResults: 10,
           key: youTubeApiKey(),
         },
       }
     );
 
-    // console.log(`response ${response}`);
-
     this.setState({ videos: response.data.items });
+  };
 
-    // // console.log(`response  ${response} `);
-    // console.log(`appt state ${this.state.videos} `);
+  onVideoSelect = (video) => {
+    this.setState({ selectedVideo: video });
+    console.log(this.state.selectedVideo);
   };
 
   render() {
     return (
       <div className="ui container">
         <SearchBar onSubmit={this.onSearchSubmit} />
-        {/* <DisplayVideo videoId={this.state.videos} /> */}
-        <VideoList videos={this.state.videos} />
-        {/* <VideoDetail /> */}
+        <VideoDetail selectedVideo={this.state.selectedVideo} />
+        <VideoList
+          videos={this.state.videos}
+          onVideoSelect={this.onVideoSelect}
+        />
       </div>
     );
   }
