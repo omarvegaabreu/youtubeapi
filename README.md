@@ -1,6 +1,8 @@
-# Youtube API search
+# Youtube API search 
 
-Link to site : https://peaceful-saha-56d63e.netlify.app/
+Link to site : https://youtubevideosearch-ov.netlify.app
+
+![alt text](https://github.com/omarvegaabreu/youtubeapi/blob/master/public/images/Capture.PNG)
 
 This is a basic react application that connects to the Youtube api in order to render videos to the front end.
 
