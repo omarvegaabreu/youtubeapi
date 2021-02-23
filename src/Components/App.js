@@ -4,7 +4,7 @@ import SearchBar from "./SearchBar";
 import { youTubeApiKey } from "../Util/apiKey";
 import VideoList from "./VideoList";
 import VideoDetail from "./VideoDetail";
-import { Container, Input } from "semantic-ui-react";
+import { Container } from "semantic-ui-react";
 import "./App.css";
 
 class App extends React.Component {
@@ -28,7 +28,6 @@ class App extends React.Component {
     );
 
     this.setState({ videos: response.data.items });
-    console.log("app state ", this.state.videos);
   };
 
   onVideoSelect = (video) => {

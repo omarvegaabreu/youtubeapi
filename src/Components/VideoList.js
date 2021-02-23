@@ -1,6 +1,6 @@
 import React from "react";
 import VideoItem from "./VideoItem";
-import { Grid, Container } from "semantic-ui-react";
+import { Grid } from "semantic-ui-react";
 import "./VideoList.css";
 
 const VideoList = ({ videos, onVideoSelect }) => {
