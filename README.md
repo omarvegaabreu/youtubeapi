@@ -1,6 +1,6 @@
 # Youtube API search 
 
-Link to site : https://peaceful-saha-56d63e.netlify.app/
+Link to site : https://youtubevideosearch-ov.netlify.app
 
 ![alt text](https://github.com/omarvegaabreu/youtubeapi/blob/master/public/images/Capture.PNG)
 
