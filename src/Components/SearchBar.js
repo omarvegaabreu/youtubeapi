@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Form, Label, Segment } from "semantic-ui-react";
+import { Button, Form, Label, Segment, Container } from "semantic-ui-react";
 import "./SearchBar.css";
 
 class SearchBar extends React.Component {
@@ -16,22 +16,24 @@ class SearchBar extends React.Component {
 
   render() {
     return (
-      <Segment>
-        <Label.Detail color="facebook">
-          {this.state.term ? "Have fun!" : null}
-        </Label.Detail>
-        <Form onSubmit={this.onFormSubmit}>
-          <Form.Input
-            value={this.state.term}
-            placeholder="Search"
-            onChange={this.onInputChange}
-          />
+      <Container>
+        <Segment>
+          <Label.Detail color="facebook">
+            {this.state.term ? "Have fun!" : null}
+          </Label.Detail>
+          <Form onSubmit={this.onFormSubmit}>
+            <Form.Input
+              value={this.state.term}
+              placeholder="Search"
+              onChange={this.onInputChange}
+            />
 
-          <Button color="facebook" onClick={this.onSubmit}>
-            Search
-          </Button>
-        </Form>
-      </Segment>
+            <Button color="facebook" onClick={this.onSubmit}>
+              Search
+            </Button>
+          </Form>
+        </Segment>
+      </Container>
     );
   }
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import VideoItem from "./VideoItem";
-import { Grid } from "semantic-ui-react";
+import { Grid, Container } from "semantic-ui-react";
 import "./VideoList.css";
 
 const VideoList = ({ videos, onVideoSelect }) => {
@@ -21,9 +21,11 @@ const VideoList = ({ videos, onVideoSelect }) => {
     );
   });
   return (
-    <Grid relaxed columns={2}>
-      {renderedVideosList}
-    </Grid>
+    <Container>
+      <Grid relaxed columns={2}>
+        {renderedVideosList}
+      </Grid>
+    </Container>
   );
 };
 

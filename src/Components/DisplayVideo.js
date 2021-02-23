@@ -1,14 +1,18 @@
 import React from "react";
-import { Embed } from "semantic-ui-react";
+import { Embed, Container } from "semantic-ui-react";
 
 const DisplayVideo = ({ videoToDisplay }) => {
   if (videoToDisplay) {
     const videoId = videoToDisplay.id.videoId;
 
     return (
-      <div className="ui container">
-        <Embed id={videoId} placeholder={"placeholder"} source={"youtube"} />
-      </div>
+      <Container>
+        <Container
+          id={videoId}
+          placeholder={"placeholder"}
+          source={"youtube"}
+        />
+      </Container>
     );
   } else {
     return null;
