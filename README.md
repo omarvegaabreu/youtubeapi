@@ -1,6 +1,8 @@
 # Youtube API search 
 
-Link to site : https://youtubevideosearch-ov.netlify.app
+Link to site : https://youtubevideosearch-ov.netlify.app or https://tranquil-woodland-58507.herokuapp.com/
+
+
 
 ![alt text](https://github.com/omarvegaabreu/youtubeapi/blob/master/public/images/Capture.PNG)
 
