@@ -18,15 +18,19 @@ const VideoDetail = ({ selectedVideo }) => {
     const videoId = selectedVideo.id.videoId;
     return (
       <Container>
-        {" "}
         <Modal
           open={open}
           onClose={() => setOpen(false)}
           onOpen={() => setOpen(true)}
           trigger={
             <Sticky className="sticky">
-              <Button color="red" icon labelPosition="center">
-                <Icon name="play" /> Click to view: {videoTitle}
+              <Button animated color="red">
+                <Button.Content visible>
+                  Click to view: {videoTitle}
+                </Button.Content>
+                <Button.Content hidden>
+                  <Icon name="play" />
+                </Button.Content>
               </Button>
             </Sticky>
           }

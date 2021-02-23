@@ -21,11 +21,9 @@ const VideoList = ({ videos, onVideoSelect }) => {
     );
   });
   return (
-    <Container>
-      <Grid relaxed columns={2}>
-        {renderedVideosList}
-      </Grid>
-    </Container>
+    <Grid relaxed columns={2}>
+      {renderedVideosList}
+    </Grid>
   );
 };
 

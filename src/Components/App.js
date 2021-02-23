@@ -4,7 +4,7 @@ import SearchBar from "./SearchBar";
 import { youTubeApiKey } from "../Util/apiKey";
 import VideoList from "./VideoList";
 import VideoDetail from "./VideoDetail";
-import { Container } from "semantic-ui-react";
+import { Container, Input } from "semantic-ui-react";
 import "./App.css";
 
 class App extends React.Component {

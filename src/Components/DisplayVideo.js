@@ -7,11 +7,7 @@ const DisplayVideo = ({ videoToDisplay }) => {
 
     return (
       <Container>
-        <Container
-          id={videoId}
-          placeholder={"placeholder"}
-          source={"youtube"}
-        />
+        <Embed id={videoId} placeholder={"placeholder"} source={"youtube"} />
       </Container>
     );
   } else {
