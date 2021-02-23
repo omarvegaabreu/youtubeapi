@@ -8,7 +8,6 @@ const VideoList = ({ videos, onVideoSelect }) => {
     const videoId = video.id.videoId
       ? video.id.videoId
       : Math.floor(Math.random() * 20) + 1;
-    console.log(videoId);
 
     return (
       <Grid.Column mobile={16} tablet={8} computer={8}>
